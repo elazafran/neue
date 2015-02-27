@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset='UTF-8' />
+      <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+
+      <title>Modal QUnit Test Runner</title>
+
+      <script src='../bower_components/jquery/jquery.js'></script>
+      <link rel='stylesheet' href='../node_modules/grunt-contrib-qunit/test/libs/qunit.css'>
+      <script src='../node_modules/grunt-contrib-qunit/test/libs/qunit.js'></script>
+
+      <!-- add any external libraries your code needs -->
+
+      <!-- add any JS files under test (or put them in different .html files) -->
+      <link rel="stylesheet" href="../dist/modal.css"/>
+      <script src='../dist/modal.js'></script>
+
+      <!-- your tests, any and all to run with the given fixtures below -->
+      <script src='tests.js'></script>
+
+  </head>
+  <body>
+    <div class="chrome">
+
+      <a href="#" data-modal-href="#test-modal">Test Link</a>
+
+      <div data-modal id="test-modal">
+        <p>It's working!</p>
+      </div>
+
+      <div id="qunit"></div> <!-- QUnit fills this with results, etc -->
+      <div id='qunit-fixture'>
+        <!-- any HTML you want to be present in each test (will be reset for each test) -->
+      </div>
+
+    </div>
+  </body>
+</html>

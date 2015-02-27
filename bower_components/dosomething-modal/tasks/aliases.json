@@ -1,0 +1,7 @@
+{
+  "default": ["build", "lint", "test", "watch"],
+  "build": ["clean:dist", "sass", "postcss", "requirejs", "modernizr"],
+  "lint": ["jshint"],
+  "test": ["qunit"],
+  "travis": ["lint", "test"]
+}

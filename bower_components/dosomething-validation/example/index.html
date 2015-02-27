@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+
+    <script src="../dist/modernizr.js"></script>
+
+    <link rel="stylesheet" href="../bower_components/neue/dist/neue.js"/>
+    <link rel="stylesheet" href="../bower_components/neue/dist/neue.css"/>
+    <link rel="stylesheet" href="../dist/validation.css"/>
+  </head>
+  <body>
+
+    <div class="chrome">
+      <div class="wrapper">
+        <div class="navigation -floating">
+          <div class="navigation__logo">
+            <span>DoSomething.org</span>
+          </div>
+        </div>
+
+        <header role="banner">
+          <div class="wrapper">
+            <h1 class="__title">Validation Example</h1>
+          </div>
+        </header>
+
+        <div class="container -padded">
+          <div class="wrapper">
+            <div class="container__block">
+              <h1>Example Form</h1>
+
+              <form action="#">
+                <div class="form-item">
+                  <label class="field-label" for="first_name">First Name <em>(required)</em></label>
+                  <input id="first_name" class="text-field" type="text" data-validate="name" data-validate-required />
+                </div>
+
+                <div class="form-item">
+                  <label class="field-label" for="last_name">Last Name</label>
+                  <input id="last_name" class="text-field" type="text" data-validate="last_name" />
+                </div>
+
+                <div class="form-item">
+                  <label class="field-label" for="birthday">Birthday <em>(required)</em></label>
+                  <input id="birthday" class="text-field" type="text" data-validate="birthday" data-validate-required placeholder="MM/DD/YYYY" />
+                </div>
+
+                <div class="form-actions">
+                  <input type="submit" class="button"/>
+                </div>
+              </form>
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../dist/validation.js"></script>
+    <script src="example-validations.js"></script>
+
+  </body>
+</html>
+

@@ -1,4 +1,5 @@
 # Ignore dependencies
+bower_components/
 node_modules
 npm-debug.log
 
@@ -24,6 +25,7 @@ Icon
 # editor ignores
 *.sublime-workspace
 *.sublime-project
+.idea
 
 # rack/pow stuff
 log/

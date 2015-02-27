@@ -1,0 +1,28 @@
+// Validation styles
+//
+// .has-success    - Successful form validation
+// .has-warning    - Warning form validation (not an error, but worth double-checking).
+// .has-error      - Something's wrong!
+//
+
+$error-color: #ff4747;
+$success-color: #4e2b63;
+
+.validation {
+  position: relative;
+  transition: top 0.5s;
+
+  &.is-showing-message {
+    top: -1.5em;
+  }
+}
+
+.validation__message {
+  &.has-error {
+    color: $error-color;
+  }
+
+  &.has-warning, &.has-success {
+    color: $success-color;
+  }
+}

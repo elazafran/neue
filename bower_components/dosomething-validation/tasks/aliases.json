@@ -1,0 +1,5 @@
+{
+  "default": ["build", "test", "watch"],
+  "build": ["clean:dist", "sass", "postcss", "requirejs", "modernizr"],
+  "test": ["jshint", "qunit"]
+}

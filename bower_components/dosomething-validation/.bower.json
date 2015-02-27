@@ -1,0 +1,29 @@
+{
+  "name": "dosomething-validation",
+  "version": "0.1.0",
+  "main": [
+    "dist/validation.css",
+    "dist/validation.js"
+  ],
+  "dependencies": {
+    "jquery": "^1.7"
+  },
+  "devDependencies": {
+    "jquery": "1.8.3",
+    "almond": "~0.2.9",
+    "neue": "DoSomething/neue#^6.0.0"
+  },
+  "resolutions": {
+    "jquery": "1.8.3"
+  },
+  "homepage": "https://github.com/DoSomething/validation",
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.0",
+    "commit": "1b23ce26dc5b0f998b1395c473623f12ea82c7b0"
+  },
+  "_source": "git://github.com/DoSomething/validation.git",
+  "_target": "~0.1.0",
+  "_originalSource": "DoSomething/validation"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "dosomething-modal",
+  "version": "0.1.1",
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DoSomething/neue.git"
+  },
+  "scripts": {
+    "postinstall": "grunt build",
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^4.0.2",
+    "css-mqpacker": "^2.0.0",
+    "each-async": "^1.1.1",
+    "grunt-bump": "^0.0.14",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.7.1",
+    "grunt-contrib-qunit": "^0.3.0",
+    "grunt-contrib-requirejs": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-modernizr": "^0.6.0",
+    "grunt-postcss": "^0.2.0",
+    "jshint-stylish": "^1.0.0",
+    "load-grunt-config": "^0.16.0",
+    "node-sass": "^2.0.0-beta",
+    "time-grunt": "^1.0.0"
+  }
+}

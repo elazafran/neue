@@ -1,0 +1,107 @@
+// Show supplementary information to a user without leaving the page. Fills
+// screen on mobile, centered with overlay on tablet/desktop. Use `.modal__block`
+// element to add padding inside the modal. (This allows "full-width" modal content
+// to work without a negative margin.)
+//
+// #### Options:
+// - `[data-modal-close]`: set to "true" to include a close button on the modal, or "skip" to delegate a skip form action
+// - `[data-modal-skip-form]`: selector for a skip `form` element to submit upon clicking the "skip" link
+//
+// Styleguide Modal (Popup)
+
+.modal-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  z-index: 9999;
+
+  @media #{$tablet} {
+    padding: 72px;
+  }
+
+  // Animations (such as `fadeOut` and `moveDown`) are defined in Neue
+  // @TODO: Is there a reasonable way to share these?
+  &.animated-close {
+    animation: fadeOut 0.25s;
+
+    [data-modal] {
+      animation: moveDown 0.25s;
+    }
+  }
+}
+
+[data-modal] {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.75);
+  width: auto;
+  word-wrap: break-word;
+  z-index: 1050;
+
+  @media #{$tablet} {
+    max-width: 600px;
+    min-height: 0;
+    margin: 0 auto;
+  }
+}
+
+// Close Button
+.modal-close-button {
+  position: absolute;
+  top: 0;
+  right: $base-spacing;
+  font-size: 36px;
+  font-weight: bold;
+  color: $light-gray;
+  opacity: 0.4;
+  text-decoration: none;
+
+  &:hover {
+    color: #ccc;
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &.-alt {
+    font-size: 18px;
+    top: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// If JavaScript is enabled (via Modernizr check), hide inline modal
+// containers to prevent flash of unstyled content as JS initializes.
+.modernizr-js [data-modal] {
+  display: none;
+}
+
+// See also: _chrome.scss
+.chrome.has-modal {
+  position: fixed;
+
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.25s;
+    z-index: 9998;
+  }
+
+  &.animated-close:after {
+    animation: fadeOut 0.25s;
+  }
+}

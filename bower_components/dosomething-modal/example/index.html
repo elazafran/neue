@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+
+    <script src="../dist/modernizr.js"></script>
+
+    <link rel="stylesheet" href="../bower_components/neue/dist/neue.js"/>
+    <link rel="stylesheet" href="../bower_components/neue/dist/neue.css"/>
+    <link rel="stylesheet" href="../dist/modal.css"/>
+  </head>
+  <body>
+
+    <div class="chrome">
+      <div class="wrapper">
+        <div class="navigation -floating">
+          <div class="navigation__logo">
+            <span>DoSomething.org</span>
+          </div>
+        </div>
+
+        <header role="banner">
+          <div class="wrapper">
+            <h1 class="__title">Modal Example</h1>
+          </div>
+        </header>
+
+        <div class="container -padded">
+          <div class="wrapper">
+            <div class="container__block">
+              <h1>Example modal</h1>
+              <p>
+                Click for an <a href="#" data-modal-href="#test-modal">example modal</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-modal id="test-modal">
+        <p>It's working!</p>
+      </div>
+    </div>
+
+
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../dist/modal.js"></script>
+
+  </body>
+</html>
+
